@@ -1,0 +1,259 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff5f9;
+  color: #513744;
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  width: 90%;
+  margin: 20px auto;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(190, 105, 143, 0.12);
+}
+
+.logo {
+  color: #c94f83;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #765568;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #d94f8c;
+}
+
+/* Bagian perkenalan */
+.hero {
+  width: 90%;
+  min-height: 380px;
+  margin: 30px auto 50px;
+  padding: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: linear-gradient(120deg, #ffdce9, #f8b9d1);
+  border-radius: 25px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text .intro {
+  color: #bd4779;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 12px 0;
+  color: #733b59;
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.hero p {
+  max-width: 550px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #c94f83;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: #a93669;
+  transform: translateY(-3px);
+}
+
+/* Foto profil */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 8px solid white;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(120, 50, 85, 0.2);
+}
+
+/* Semua bagian konten */
+section {
+  display: block;
+  width: 90%;
+  margin: 55px auto;
+}
+
+/* Judul bagian */
+.section-title {
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+  color: #a83e70;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Informasi diri menggunakan Grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.info-card {
+  padding: 25px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(190, 105, 143, 0.10);
+  border-left: 5px solid #e78bb1;
+  transition: 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card h3 {
+  margin-bottom: 8px;
+  color: #c94f83;
+  font-size: 18px;
+}
+
+/* Minat dan keahlian menggunakan Flexbox */
+.skills {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.skill-card {
+  flex: 1 1 250px;
+  max-width: 350px;
+  padding: 30px 20px;
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(190, 105, 143, 0.10);
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(190, 105, 143, 0.18);
+}
+
+.skill-card h3 {
+  margin-bottom: 10px;
+  color: #c94f83;
+  font-size: 20px;
+}
+
+.skill-card p {
+  font-size: 15px;
+}
+
+/* Footer */
+footer {
+  margin-top: 70px;
+  padding: 25px;
+  background: #733b59;
+  color: white;
+  text-align: center;
+}
+
+/* Tampilan tablet dan HP */
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    padding: 35px 22px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero-image img {
+    width: 170px;
+    height: 170px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section-title {
+    font-size: 25px;
+  }
+}
